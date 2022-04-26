@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+      
+p,
+h5{
+    margin: 0;
+}
+
+.my_green-bg{
+    background-color: #009688;
+}
+
+.my_grey-bg{
+    background-color: #dbdbd3;
+}
+.active{
+    background-color: #989823;
+}
+#my_green-header{
+    height: 15vh;
+}
+
+#my_grey-main{
+    height: 85vh;
+}
+
+#my_content-container{
+    height: 95vh;
+    width: 85vw;    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+}
+
+#my_header-row{
+    height: 75px;
+    background-color: #eaeaea;
+}
+
+#my_content-row{
+    height: calc(100% - 75px);
+}
+
+#my_notification-banner{
+    background-color: #8edafc;
+}
+
+
+#my_user{
+border-right: 1px solid lightgray;
+}
+
+.my_profile-img img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.my_contacts-text h5{
+    font-size: 1rem;
+}
+
+.my_contacts-text p{
+    font-size: 0.8rem;
+    color: #bcbcc2;
+}
+
+.my_contacts_date{
+    font-size: 0.6rem;
+    color: #bcbcc2;
+}
+
+.my_contacts-icons h5 i {
+    padding: 0 4px;
+    color: #b7b2b2;
+    cursor: pointer;
+}
+
+.my_sent{
+    align-self: flex-end;
+    width: 40%;
+    background-color: #d5f9ba;
+}
+
+.my_recieved{
+    align-self: flex-start;
+    width: 40%;
+    background-color: #ffffff;
+}
+
+#contact_list{
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#my_contacts{
+    position: absolute;
+    top: 60px;
+}
+
+#my_notification-bell{
+    height: 40px;
+    width: 40px;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+#my_notification-bell h4{
+    color: #8edafc;
+}
+
+
+#my_notification-text h5{
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+#my_notification-text p {
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+#my_chat{
+    height: 100%;
+}
+
+#my_chat-box{
+    height: calc(100% - 50px);
+    background-image: url(/assets/img/mine.jpg);
+    background-repeat: repeat;
+    background-size: 400px;
+    padding: 30px 40px;
+    overflow-y: scroll;
+
+}
+
+#my_chat-box > div > h5{
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+#my_chat-box > div > p{
+    font-size: 0.7rem;
+    color: #bcbcc2;
+}   
+
+#my_chat-input{
+    height: 50px;
+    background-color: #f3eeea;
+}
+
+#my_chat-input h5 i {
+    color: #6b7376;
+    cursor: pointer;
+}

@@ -2,6 +2,7 @@ const app = new Vue(
     {
         el : '#app',
         data : {
+            
             contacts: [
     {
         name: 'Michele',
@@ -163,13 +164,20 @@ const app = new Vue(
                 status: 'received'
             }
         ],
-    }
+    },
+    
+    
+
+    
+    
 ],
-     
+        clickActiveIndex : 0,
+       
+       
         },
         
-        method: {
-    
+        methods: {
+          
         }
-    
+        
     });
