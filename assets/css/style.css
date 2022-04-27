@@ -85,12 +85,14 @@ border-right: 1px solid lightgray;
 
 .my_sent{
     align-self: flex-end;
+    position: relative;
     width: 40%;
     background-color: #d5f9ba;
 }
 
 .my_recieved{
     align-self: flex-start;
+    position: relative;
     width: 40%;
     background-color: #ffffff;
 }

@@ -164,13 +164,10 @@ const app = new Vue(
                 status: 'received'
             }
         ],
-    },
+    },  
     
-    
+ ],
 
-    
-    
-],
         clickActiveIndex : 0,
         newMessageText : '',
         searchKey : '',
@@ -222,6 +219,14 @@ const app = new Vue(
 
 			},
 
-        }
+         		
+		},
+		
+
+	},
+	
+	
+);
+
         
-    });
+        
