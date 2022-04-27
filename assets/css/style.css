@@ -9,6 +9,7 @@ h5{
     margin: 0;
 }
 
+
 .my_green-bg{
     background-color: #009688;
 }
@@ -103,6 +104,11 @@ border-right: 1px solid lightgray;
 #my_contacts{
     position: absolute;
     top: 60px;
+}
+
+#my_contact_user_list:hover{
+    background-color: #dedede;
+
 }
 
 #my_notification-bell{

@@ -76,7 +76,7 @@
                                     <input class=" flex-grow-1 border-0 p-1" type="text" name="" id="" placeholder=" Cerca o inizia una nuova chat">
                                 </div>
 
-                                <div id="my_contact_user_list" class="col-12 p-2 d-flex border-top" v-for="(user, index) in contacts"  :class="{ active : visible == user }" @click="clickActiveIndex = index ; visible = user" >
+                                <div id="my_contact_user_list" class="col-12 p-2 d-flex border-top" v-for="(user, index) in contacts"  :class="{ active : contacts.visible == user }" @click="clickActiveIndex = index ; contacts.visible = user" >
                                     <div class="my_profile-img">
                                         <img :src="'assets/img/avatar' + user.avatar + '.jpg'" >
                                     </div>
@@ -105,7 +105,7 @@
                             <div id="my_chat-input" class="col-12 d-flex justify-content-center align-items-center">
 
                                 <h5 class="ps-2 pe-4"><i class="far fa-smile"></i></h5>
-                                <input class="flex-grow-1 border-0 rounded-3 ps-3" type="text" name="" id="" placeholder="Scrivi un messaggio">
+                                <input class="flex-grow-1 border-0 rounded-3 ps-3" type="text" v-model="newMessageText" placeholder="Scrivi un messaggio" @keyup.enter="sendMessage(clickActiveIndex)">
                                 <h5 class="ps-4 pe-2"><i class="fa-solid fa-microphone"></i></h5>
 
                             </div>

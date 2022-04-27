@@ -172,12 +172,55 @@ const app = new Vue(
     
 ],
         clickActiveIndex : 0,
+        newMessageText : '',
        
        
         },
         
         methods: {
           
+            sendMessage(index){
+				let newMessage = {
+					date : this.getDateTime(),
+					message : this.newMessageText,
+					status : 'sent'
+				}
+
+
+				if(newMessage.message.length>0){
+					
+					this.contacts[index].messages.push(newMessage);
+					
+					setTimeout(() => {
+						let newRecievedMessage = {
+							date:  this.getDateTime(),
+							message: 'Ok',
+							status : 'recieved'
+						};
+						this.contacts[index].messages.push(newRecievedMessage);
+					}, 1000)
+					this.newMessageText = '';
+
+					
+				}
+
+				
+			},
+
+            getDateTime(){
+				let now = new Date();
+				let dd = String(now.getDate()).padStart(2, '0');
+				let mm = String(now.getMonth() + 1).padStart(2, '0'); 
+				let yyyy = now.getFullYear();
+				let hour = now.getHours();
+				let minutes = now.getMinutes();
+				let seconds = now.getSeconds();
+				
+
+				return dd + '/' + mm + '/' + yyyy + ' ' +  hour +':'+ minutes +':'+ seconds;		
+
+			},
+
         }
         
     });
