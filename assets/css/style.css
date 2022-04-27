@@ -135,6 +135,7 @@ border-right: 1px solid lightgray;
 
 #my_chat{
     height: 100%;
+    position: relative;
 }
 
 #my_chat-box{
@@ -144,6 +145,10 @@ border-right: 1px solid lightgray;
     background-size: 400px;
     padding: 30px 40px;
     overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
 
 }
 
@@ -160,6 +165,8 @@ border-right: 1px solid lightgray;
 #my_chat-input{
     height: 50px;
     background-color: #f3eeea;
+    position: absolute;
+    bottom: 0;
 }
 
 #my_chat-input h5 i {
