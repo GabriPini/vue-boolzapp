@@ -173,6 +173,7 @@ const app = new Vue(
 ],
         clickActiveIndex : 0,
         newMessageText : '',
+        searchKey : '',
        
        
         },
