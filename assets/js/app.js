@@ -1,5 +1,6 @@
 const app = new Vue(
     {
+        
         el : '#app',
         data : {
             
@@ -167,16 +168,15 @@ const app = new Vue(
     },  
     
  ],
-
+        
         clickActiveIndex : 0,
         newMessageText : '',
         searchKey : '',
-       
-       
-        },
-        
+
+        }, 
+
         methods: {
-          
+
             sendMessage(index){
 				let newMessage = {
 					date : this.getDateTime(),
@@ -244,7 +244,9 @@ const app = new Vue(
 			},
 
 				
-
+            sendAudio: function () {
+                alert("Non fare Audio di un ora please");
+            },
          		
 		},
 		
