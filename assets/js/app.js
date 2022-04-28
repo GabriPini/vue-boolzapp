@@ -180,12 +180,12 @@ const app = new Vue(
             sendMessage(index){
 				let newMessage = {
 					date : this.getDateTime(),
-					message : this.newMessageText,
+					message : this.newMessageText.trim(),
 					status : 'sent'
 				}
 
 
-				if(newMessage.message.length>0){
+				if(newMessage.message.length >0){
 					
 					this.contacts[index].messages.push(newMessage);
 					
