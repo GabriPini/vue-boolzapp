@@ -221,7 +221,6 @@ const app = new Vue(
 
             showDropdownMenu : function(){
 				const element = document.querySelectorAll(".my_dropdown-list");
-				console.log(element);
 
 				element.forEach(element => {
 					
