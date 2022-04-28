@@ -172,10 +172,26 @@ const app = new Vue(
         clickActiveIndex : 0,
         newMessageText : '',
         searchKey : '',
+        randomAnswer :'',
+        randomAnswerList : [
+            'Quando tutto sembra andarti contro, ricorda che l’aereo decolla controvento, non col vento a favore',
+            'Si vive una volta sola, ma se lo fai bene, una volta sola è abbastanza',
+            'C’è una crepa in ogni cosa. Ed è da lì che entra la luce' ,
+            'Ama la vita più della sua logica, solo allora ne capirai il senso',
+            'Il tuo tempo è limitato, quindi non sprecarlo vivendo la vita di qualcun altro',
+            'Preoccupati di ciò che pensano gli altri e sarai sempre loro prigioniero',
+            'Nessun uomo entra mai due volte nello stesso fiume, perché il fiume non è mai lo stesso, ed egli non è lo stesso uomo' ]
+        
 
         }, 
 
         methods: {
+
+            generate() {
+               let chosenAnswer = Math.floor(Math.random() * this.randomAnswerList.length);
+                return this. randomAnswer = this.randomAnswerList[chosenAnswer];
+              },
+
 
             sendMessage(index){
 				let newMessage = {
@@ -192,7 +208,7 @@ const app = new Vue(
 					setTimeout(() => {
 						let newRecievedMessage = {
 							date:  this.getDateTime(),
-							message: 'Ok',
+							message: this.generate(),
 							status : 'recieved'
 						};
 						this.contacts[index].messages.push(newRecievedMessage);
