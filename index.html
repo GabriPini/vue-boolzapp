@@ -94,7 +94,7 @@
                     <div class="col-8 my_border ">
                         <div id="my_chat" class="row">
                             <div id="my_chat-box" class="col-12 d-flex flex-column ">
-                                <div class="my_border rounded-3 p-3 mb-3" v-for="(element,index) in contacts[clickActiveIndex].messages" :class="(element.status === 'sent') ? 'my_sent' : 'my_recieved'">
+                                <div class="my_border rounded-3 p-3 pe-4 mb-3" v-for="(element,index) in contacts[clickActiveIndex].messages" :class="(element.status === 'sent') ? 'my_sent' : 'my_recieved'">
                                     <h5>{{ element.message}}</h5>
                                     <p class="text-end mt-1">{{ element.date }}</p>
 
@@ -106,7 +106,7 @@
 
                                         </p>
 
-                                        <ul class="my_dropdown-list my_hidden p-1">
+                                        <ul class="my_dropdown-list my_hidden px-2 pb-5">
 
                                             <li class="my_dropdown-item p-2 " @click="getInfoMessage(index)">Message info</li>
                                             <li class="my_dropdown-item p-2 my_text-red "@click="deleteMessage(index)">Delete message</li>
