@@ -219,6 +219,33 @@ const app = new Vue(
 
 			},
 
+            showDropdownMenu : function(){
+				const element = document.querySelectorAll(".my_dropdown-list");
+				console.log(element);
+
+				element.forEach(element => {
+					
+					element.classList.toggle("my_hidden");
+				});
+
+			},
+
+			
+			deleteMessage : function(index){
+				this.contacts[this.clickActiveIndex].messages.splice(index,1);
+			},
+
+
+			
+			getInfoMessage : function(index){
+				let date = this.contacts[this.clickActiveIndex].messages[index].date;
+				let message = this.contacts[this.clickActiveIndex].messages[index].message;
+				let status = this.contacts[this.clickActiveIndex].messages[index].status;
+				alert(date + ' ' + message + ' '+ status)
+			},
+
+				
+
          		
 		},
 		

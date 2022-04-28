@@ -13,9 +13,7 @@
     
     <div id="app">
         <main>
-         
-            <div id="my_green-header" class="my_green-bg"></div>
-            <div id="my_grey-main" class="my_grey-bg"></div>
+
             <div id="my_content-container" class="container-fluid my_border">
 
                 <div id="my_header-row" class="row ">
@@ -100,7 +98,22 @@
                                     <h5>{{ element.message}}</h5>
                                     <p class="text-end mt-1">{{ element.date }}</p>
 
-                                    
+                                    <div class="my_dropdown" @click="showDropdownMenu()">
+
+                                        <p class="text-end">
+
+                                            <i class="fa-solid fa-chevron-down "></i>
+
+                                        </p>
+
+                                        <ul class="my_dropdown-list my_hidden p-1">
+
+                                            <li class="my_dropdown-item p-2 " @click="getInfoMessage(index)">Message info</li>
+                                            <li class="my_dropdown-item p-2 my_text-red "@click="deleteMessage(index)">Delete message</li>
+
+                                        </ul>
+
+                                    </div>
                                 </div>
                             </div>
                             

@@ -9,14 +9,11 @@ h5{
     margin: 0;
 }
 
-
-.my_green-bg{
-    background-color: #009688;
-}
-
-.my_grey-bg{
-    background-color: #dbdbd3;
-}
+#app{
+    height: 100vh;
+    background: linear-gradient(to bottom,
+    #009688 100px, #dbdbd3 calc(0% + 100px) 100%);
+}   
 .active{
     background-color: #dedede;
 }
@@ -174,4 +171,37 @@ border-right: 1px solid lightgray;
 #my_chat-input h5 i {
     color: #6b7376;
     cursor: pointer;
+}
+
+.my_dropdown{
+    color: transparent;
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.my_dropdown ul{
+    list-style: none;
+}
+
+.my_dropdown:hover{
+    color: black;
+    cursor: pointer;
+}
+
+.my_dropdown:hover .my_dropdown-item{
+    background-color: white;
+}
+
+.my_dropdown:hover .my_text-red{
+    color: rgb(202, 11, 11);
+}
+
+.my_hidden{
+    visibility: hidden;
+    
+}
+
+.my_show {
+    visibility: visible;
 }
